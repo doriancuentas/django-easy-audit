@@ -258,6 +258,6 @@ def post_delete(sender, instance, using, **kwargs):
 
 if WATCH_MODEL_EVENTS:
     signals.post_save.connect(post_save, dispatch_uid='easy_audit_signals_post_save')
-    signals.pre_save.connect(pre_save, dispatch_uid='easy_audit_signals_pre_save')
+    # signals.pre_save.connect(pre_save, dispatch_uid='easy_audit_signals_pre_save')
     signals.m2m_changed.connect(m2m_changed, dispatch_uid='easy_audit_signals_m2m_changed')
     signals.post_delete.connect(post_delete, dispatch_uid='easy_audit_signals_post_delete')
